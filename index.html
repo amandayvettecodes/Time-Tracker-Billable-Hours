@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Time Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Time Tracker</h1>
+    <label>Client/Project:
+      <input type="text" id="project" placeholder="Client or Project name" />
+    </label>
+    <label>Hourly Rate:
+      <input type="number" id="rate" value="50" />
+    </label>
+    
+    <div class="timer-display">
+      <span id="timer">00:00:00</span>
+    </div>
+
+    <button onclick="startTimer()">Start</button>
+    <button onclick="stopTimer()">Stop</button>
+    <button onclick="resetTimer()">Reset</button>
+    
+    <h2>Logged Sessions</h2>
+    <table>
+      <thead>
+        <tr><th>Project</th><th>Duration</th><th>Billable</th><th>Timestamp</th><th>Delete</th></tr>
+      </thead>
+      <tbody id="log"></tbody>
+    </table>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
